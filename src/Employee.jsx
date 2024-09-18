@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 const Employee = () => {
+
+    // complete a task where we have to show the employee list and details , and delete functionality when someone click on delete button and also add employee functionality to add 
   const [Employees, setEmployees] = useState([
     {
       id: 1,
@@ -144,7 +146,7 @@ const Employee = () => {
   ]);
 
   const [shoewEmp, setShowEmp] = useState(0);
-  const [addItem, setAddItem] = useState(false);
+
 
   const showEmployee = (id) => {
     setShowEmp(id);
@@ -157,6 +159,7 @@ const Employee = () => {
   };
   const filterEmployees = Employees.filter((e) => e.id === shoewEmp);
     //   add employee
+    const [addItem, setAddItem] = useState(false);
     const [name, setName] = useState("");
     const [salary, setSalary] = useState("");
     const [age, setAge] = useState("");
