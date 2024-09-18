@@ -71,7 +71,8 @@ function App() {
    {/* <Timer/>  */}
 
    {/* <Employee/> */}
-   <CountDown/>
+   {/* <CountDown/> */}
+   <Check/>
 
    </>
   )

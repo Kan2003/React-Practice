@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Faq from './Faq';
 
 const Check = () => {
     const num = [
@@ -18,27 +19,12 @@ const Check = () => {
           open : false
         },
       ]
-    //   const [show , setShow] = useState(false);
-    const [openIndex , setOpenIndex] = useState(0);
-      const toggleAnswer =  (index) => {
-        setOpenIndex(openIndex === index ? null : index);
-      }
 
       return (
-        <div>
-          {num.map((item, index) => (
-            <div key={index}>
-              <h2 onClick={() => toggleAnswer(index)} >{item.question}</h2>
-              {
-                openIndex == index && <p>{item.answer}</p>
-              }
-            </div>
-          ))}
+        <div className='w-full h-screen bg-zinc-500 flex items-center py-8 flex-col gap-5'>
+          {num.map((faq, index) => <Faq faq={faq} index={index} />)}
         </div>
       )
-  return (
-    <div>Check</div>
-  )
 }
 
 export default Check
