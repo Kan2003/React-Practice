@@ -6,6 +6,7 @@ import Images from './Images'
 import Check from './Check'
 import Timer from './Timer'
 import Employee from './Employee'
+import CountDown from './components/CountDown'
 
 
 function App() {
@@ -69,7 +70,8 @@ function App() {
    </div> */}
    {/* <Timer/>  */}
 
-   <Employee/>
+   {/* <Employee/> */}
+   <CountDown/>
 
    </>
   )
