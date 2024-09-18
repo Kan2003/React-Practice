@@ -7,6 +7,7 @@ import Check from './Check'
 import Timer from './Timer'
 import Employee from './Employee'
 import CountDown from './components/CountDown'
+import Overlay from './components/overlay/Overlay'
 
 
 function App() {
@@ -72,7 +73,8 @@ function App() {
 
    {/* <Employee/> */}
    {/* <CountDown/> */}
-   <Check/>
+   {/* <Check/> */}
+   <Overlay/>
 
    </>
   )
