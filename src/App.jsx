@@ -9,6 +9,7 @@ import Employee from './Employee'
 import CountDown from './components/CountDown'
 import Overlay from './components/overlay/Overlay'
 import Undoable from './components/undoable_counter/Undoable'
+import Shoping from './components/Shoping/Shoping'
 
 
 function App() {
@@ -76,7 +77,8 @@ function App() {
    {/* <CountDown/> */}
    {/* <Check/> */}
    {/* <Overlay/> */}
-    <Undoable/>
+    {/* <Undoable/> */}
+    <Shoping/>
    </>
   )
 }
