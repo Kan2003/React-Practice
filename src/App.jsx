@@ -10,6 +10,8 @@ import CountDown from './components/CountDown'
 import Overlay from './components/overlay/Overlay'
 import Undoable from './components/undoable_counter/Undoable'
 import Shoping from './components/Shoping/Shoping'
+import Carousel from './components/carousel/Carousel'
+// import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
 function App() {
@@ -78,7 +80,9 @@ function App() {
    {/* <Check/> */}
    {/* <Overlay/> */}
     {/* <Undoable/> */}
-    <Shoping/>
+    {/* <Shoping/> */}
+    {/* <MultiForm/> */}
+    <Carousel/>
    </>
   )
 }
