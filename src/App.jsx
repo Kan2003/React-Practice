@@ -11,6 +11,7 @@ import Overlay from './components/overlay/Overlay'
 import Undoable from './components/undoable_counter/Undoable'
 import Shoping from './components/Shoping/Shoping'
 import Carousel from './components/carousel/Carousel'
+import AutoSuggestion from './components/autosuggestion/AutoSuggestion'
 // import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
@@ -82,7 +83,8 @@ function App() {
     {/* <Undoable/> */}
     {/* <Shoping/> */}
     {/* <MultiForm/> */}
-    <Carousel/>
+    {/* <Carousel/> */}
+      <AutoSuggestion/>
    </>
   )
 }

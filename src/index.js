@@ -8,13 +8,17 @@ const num = [1, 2, 3, 4, 5]
 
 // console.log(c)
 
-// const nweNums = num.
-//                 map((n) => n * 10)
-//                 .map((n) => n + 10)
-//                 .filter((n) => n > 20)
-//                 console.log(nweNums)
+const filtered = (n) => {
+    return n === 20;  // if number is even return true else false  // customize your logic here
+}
 
+const nweNums = num.
+                map((n) => n * 10)
+                .map((n) => n + 10)
+                .filter((n) => filtered(n))
+                console.log(nweNums)
 
+console.log(nweNums)
 // reduce 
 
 // const total = num.reduce(function (acc , curr) {
@@ -23,6 +27,6 @@ const num = [1, 2, 3, 4, 5]
 // },0)
 
 
-const total = num.reduce((acc , curr) => acc + curr , 0)
+// const total = num.reduce((acc , curr) => acc + curr , 0)
 
-console.log(total)
+// console.log(total)
