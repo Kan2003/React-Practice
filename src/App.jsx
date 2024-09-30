@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
 import Images from './Images'
 import Check from './Check'
 import Timer from './Timer'
@@ -12,45 +12,46 @@ import Undoable from './components/undoable_counter/Undoable'
 import Shoping from './components/Shoping/Shoping'
 import Carousel from './components/carousel/Carousel'
 import AutoSuggestion from './components/autosuggestion/AutoSuggestion'
+import MultiSelect from './components/multi-select/MultiSelect'
 // import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
 function App() {
-  const [albums , setAlbums] = useState([])
-  const [albumId , setAlbumId] = useState()
+  // const [albums , setAlbums] = useState([])
+  // const [albumId , setAlbumId] = useState()
 
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/photos');
-        const data = await response.json();
+  // useEffect(() => {
+  //   const fetchAlbums = async () => {
+  //     try {
+  //       const response = await fetch('https://jsonplaceholder.typicode.com/photos');
+  //       const data = await response.json();
 
-        // Group photos by album ID efficiently
-        const groupedAlbums = data.reduce((acc, photo) => {
-          const albumId = photo.albumId;
-          acc[albumId] = acc[albumId] || [];
-          acc[albumId].push(photo);
-          return acc;
-        }, {});
+  //       // Group photos by album ID efficiently
+  //       const groupedAlbums = data.reduce((acc, photo) => {
+  //         const albumId = photo.albumId;
+  //         acc[albumId] = acc[albumId] || [];
+  //         acc[albumId].push(photo);
+  //         return acc;
+  //       }, {});
 
-        setAlbums(Object.entries(groupedAlbums).map(([albumId, photos]) => ({
-          id: albumId,
-          name: `Album ${albumId}`, // You can customize the album name here
-          photos,
-        })));
-      } catch (error) {
-        console.error('Error fetching albums:', error);
-      }
-    };
+  //       setAlbums(Object.entries(groupedAlbums).map(([albumId, photos]) => ({
+  //         id: albumId,
+  //         name: `Album ${albumId}`, // You can customize the album name here
+  //         photos,
+  //       })));
+  //     } catch (error) {
+  //       console.error('Error fetching albums:', error);
+  //     }
+  //   };
 
-    fetchAlbums();
-  }, []);
+  //   fetchAlbums();
+  // }, []);
 
-  const handleClick = (albumId) => {
-    setAlbumId(albumId);
-  }
+  // const handleClick = (albumId) => {
+  //   setAlbumId(albumId);
+  // }
 
-  console.log(albums)
+  // console.log(albums)
   return (
    <>
    {/* <div>
@@ -84,7 +85,8 @@ function App() {
     {/* <Shoping/> */}
     {/* <MultiForm/> */}
     {/* <Carousel/> */}
-      <AutoSuggestion/>
+      {/* <AutoSuggestion/> */}
+      <MultiSelect/>
    </>
   )
 }
