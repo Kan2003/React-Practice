@@ -13,6 +13,8 @@ import Shoping from './components/Shoping/Shoping'
 import Carousel from './components/carousel/Carousel'
 import AutoSuggestion from './components/autosuggestion/AutoSuggestion'
 import MultiSelect from './components/multi-select/MultiSelect'
+import Chips from './components/Chips/Chips'
+import ProgressBar from './components/ProgressBar/ProgressBar'
 // import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
@@ -86,7 +88,9 @@ function App() {
     {/* <MultiForm/> */}
     {/* <Carousel/> */}
       {/* <AutoSuggestion/> */}
-      <MultiSelect/>
+      {/* <MultiSelect/> */}
+      {/* <Chips/> */}
+      <ProgressBar/>
    </>
   )
 }

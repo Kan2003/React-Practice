@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Pills from "./Pills";
 import { useRef } from "react";
 import { debounce } from "lodash";
@@ -10,20 +10,23 @@ const MultiSelect = () => {
   const [selectedUser, setSelectedUser] = useState([]);
   const [selectedUserSet, setSelectedUserSet] = useState(new Set());
 
-  useEffect(() => {
-    const fetchUser = () => {
-      if (value.trim() === "") {
+  const fetchUser = useCallback(
+    debounce((searchValue) => {
+      if (searchValue.trim() === "") {
         setSuggestion([]);
         return;
       }
-      fetch(`https://dummyjson.com/users/search?q=${value}`)
+      fetch(`https://dummyjson.com/users/search?q=${searchValue}`)
         .then((res) => res.json())
         .then((data) => setSuggestion(data.users)) // Fetching the correct users array
         .catch((err) => console.log(err));
-    };
+    }, 500),
+    [] // Empty dependency array ensures the debounce function is not recreated
+  );
 
-    fetchUser();
-  }, [value]);
+  useEffect(() => {
+    fetchUser(value);
+  }, [value, fetchUser]);
 
   const handleUser = (user) => {
     setSelectedUser([...selectedUser, user]);
@@ -87,7 +90,7 @@ const MultiSelect = () => {
                 {user.firstName} {user.lastName}
               </li>
             ) : (
-              <></>
+              <><h2>Not found</h2></>
             );
           })}
         </ul>
