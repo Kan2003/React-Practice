@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import './App.css'
+import './App.css'
 import Images from './Images'
 import Check from './Check'
 import Timer from './Timer'
@@ -15,6 +15,7 @@ import AutoSuggestion from './components/autosuggestion/AutoSuggestion'
 import MultiSelect from './components/multi-select/MultiSelect'
 import Chips from './components/Chips/Chips'
 import ProgressBar from './components/ProgressBar/ProgressBar'
+import Guess from './components/GuessNumber/Guess'
 // import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
@@ -90,7 +91,8 @@ function App() {
       {/* <AutoSuggestion/> */}
       {/* <MultiSelect/> */}
       {/* <Chips/> */}
-      <ProgressBar/>
+      {/* <ProgressBar/> */}
+      <Guess/>
    </>
   )
 }
