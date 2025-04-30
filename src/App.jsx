@@ -16,6 +16,7 @@ import MultiSelect from './components/multi-select/MultiSelect'
 import Chips from './components/Chips/Chips'
 import ProgressBar from './components/ProgressBar/ProgressBar'
 import Guess from './components/GuessNumber/Guess'
+import Quiz from './components/Quiz/Quiz'
 // import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
@@ -92,7 +93,8 @@ function App() {
       {/* <MultiSelect/> */}
       {/* <Chips/> */}
       {/* <ProgressBar/> */}
-      <Guess/>
+      {/* <Guess/> */}
+      <Quiz/>
    </>
   )
 }
