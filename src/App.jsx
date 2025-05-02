@@ -17,6 +17,8 @@ import Chips from './components/Chips/Chips'
 import ProgressBar from './components/ProgressBar/ProgressBar'
 import Guess from './components/GuessNumber/Guess'
 import Quiz from './components/Quiz/Quiz'
+import Tab from './components/Tab/Tab'
+import Accordian from './components/Accordian/Accordian'
 // import MultiForm from './components/MultiStep_Form/MultiForm'
 
 
@@ -94,7 +96,9 @@ function App() {
       {/* <Chips/> */}
       {/* <ProgressBar/> */}
       {/* <Guess/> */}
-      <Quiz/>
+      {/* <Quiz/> */}
+      {/* <Tab/> */}
+      <Accordian/>
    </>
   )
 }
